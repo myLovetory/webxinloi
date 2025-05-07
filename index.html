@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Envelope</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="envelope-container" onclick="openEnvelope()">
+    <img src="https://png.pngtree.com/png-clipart/20240316/original/pngtree-envelope-wings-love-letter-cute-cartoon-three-dimensional-png-image_14596986.png" alt="Envelope" class="envelope">
+    <p class="click-text">Click to open</p>
+  </div>
+
+  <script>
+    function openEnvelope() {
+      document.querySelector('.envelope').classList.add('open');
+      setTimeout(() => {
+        window.location.href = "sorry.html";
+      }, 1000); // đợi hiệu ứng rồi chuyển trang
+    }
+  </script>
+</body>
+</html>

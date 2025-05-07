@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I'm Sorry</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="sorry-page">
+  <div class="blur-background"></div>
+
+  <div class="sorry-card enhanced">
+    <img src="https://media.tenor.com/qzjLn_6vNhAAAAAj/capoo-bugcat.gif" alt="Capoo Crying" class="capoo-gif">
+    <h1>Xin lỗi nha 😢</h1>
+    <p>Mình thật sự xin lỗi vì những gì đã làm bạn buồn...</p>
+    <p>Không cố ý đâu, và mình mong bạn tha thứ 🥺</p>
+    <p>💙 Mình trân trọng bạn rất nhiều 💙</p>
+  </div>
+
+   <!-- Nút bên dưới khung thông điệp -->
+  <div class="buttons">
+    <button onclick="window.location.href = 'GetThanks.html';" class="yes-btn">Yes, I forgive you</button>
+    <button id="no-btn" class="no-btn">No</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('no-btn');
+  
+    noBtn.addEventListener('mouseenter', () => {
+      const maxX = window.innerWidth - noBtn.offsetWidth;
+      const maxY = window.innerHeight - noBtn.offsetHeight;
+  
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
+  
+      noBtn.style.position = 'absolute';
+      noBtn.style.left = `${randomX}px`;
+      noBtn.style.top = `${randomY}px`;
+    });
+  </script>
+</body>
+</html>
